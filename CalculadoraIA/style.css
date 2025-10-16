@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    height: 100vh;           /* Define a altura total da viewport */
+    background: linear-gradient(to right, #00AAFF, #00FF6C);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 100px); /* 4 colunas de 100px */
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px); /* 1 linha para o display e 5 para os botões */
+    background-color: rgba(255, 255, 255, .15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+    transition: background-color 0.1s;
+}
+
+.calculator-grid > button:hover {
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.span-two {
+    grid-column: span 2; /* Faz o botão ocupar 2 colunas */
+}
+
+.output {
+    grid-column: 1 / -1; /* Ocupa todas as colunas */
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
