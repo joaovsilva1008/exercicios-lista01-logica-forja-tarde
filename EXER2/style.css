@@ -1,0 +1,52 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} 
+
+h1{
+     font-family: "BBH Sans Bartle", sans-serif;
+     color: rgb(0, 0, 0);
+}
+body{
+     font-family: "Roboto Slab", serif; 
+     background-image:url(imagens/pok.jpg);
+     color: rgba(4, 0, 255, 0.774);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 10px;
+     min-height: 100vh;
+     padding: 10px;
+}
+
+section{
+    display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 10px;
+}
+
+input{
+    padding: 10px;
+    background: transparent;
+    border: 2px solid #ff0000;
+    color: #0011ff;   
+}
+ 
+button{
+     padding: 10px;
+    background: #b10505;
+    border: 2px solid #2600cf;
+    color: #ffff;   
+}
+
+button :hover{
+    background: #02108a;
+    border: 2px solid #ffffffb0;
+    color: #5300da;   
+    cursor: pointer;
+}
